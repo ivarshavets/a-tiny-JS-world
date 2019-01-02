@@ -1,31 +1,35 @@
 /* Refer to https://github.com/OleksiyRudenko/a-tiny-JS-world for the task details
-   Complete the below for code reviewers' convenience:
 
-   Code repository: _put repo URL here_
+   Code repository: https://github.com/ivarshavets/a-tiny-JS-world
    Web app: _put project's github pages URL here_
    */
 
 // ======== OBJECTS DEFINITIONS ========
-// Define your objects here
+class Inhabitant {
+  constructor(species, name, gender, legs = 0, hands = 0, speak, friends=null){
+    this.species = species
+    this.name = name
+    this.gender = gender
+    this.legs = legs
+    this.hands = hands
+    this.speak = speak
+    this.friends = friends
+  }
 
+  getInfo(){
+    return Object.values(this).join("; ")
+  }
+}
+
+const dog = new Inhabitant("dog", "Ghost", "male", 4, 0, "woof", ["Jon Snow", "Stark"])
+const cat = new Inhabitant("cat", "Misty", "female", 4, 0, "meow")
+const woman = new Inhabitant("human", "Ygritte", "female", 2, 2, "Hi!", ["Jon Snow"])
+const man = new Inhabitant("human", "Jon Snow", "male", 2, 2, "Hey yo!", ["Ygritte", "Ghost"])
+const catWoman = new Inhabitant("cat-woman", "Selina", "female", 2, 2, cat.speak)
 
 // ======== OUTPUT ========
-/* Use print(message) for output.
-   Default tag for message is <pre>. Use print(message,'div') to change containing element tag.
-
-   Message can contain HTML markup. You may also tweak index.html and/or styles.css.
-   However, please, REFRAIN from improving visuals at least until your code is reviewed
-   so code reviewers might focus on a single file that is index.js.
-   */
-
-/* Print examples:
-   print('ABC');
-   print('<strong>ABC</strong>');
-   print('<strong>ABC</strong>', 'div');
-
-   print('human; John; male; 2; 2; Hello world!; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny');
-   print('human; <strong>John</strong>; male; 2; 2; <em>Hello world!</em>; Rex, Tom, Jenny', 'div');
-   */
-
-
+print(dog.getInfo())
+print(cat.getInfo())
+print(woman.getInfo())
+print(man.getInfo())
+print(catWoman.getInfo())
