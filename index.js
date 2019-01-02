@@ -1,7 +1,7 @@
 /* Refer to https://github.com/OleksiyRudenko/a-tiny-JS-world for the task details
 
    Code repository: https://github.com/ivarshavets/a-tiny-JS-world
-   Web app: _put project's github pages URL here_
+   Web app: https://ivarshavets.github.io/a-tiny-JS-world/
    */
 
 // ======== OBJECTS DEFINITIONS ========
